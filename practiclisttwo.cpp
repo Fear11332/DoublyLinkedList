@@ -33,11 +33,7 @@ void List::push_back(ValueType data)
 
 List::~List()
 {
-    while (head) {
-        tail = head->pnext;
-        delete head;
-        head = tail;
-    }
+  clear();
 }
 
 double List::operator[](const size_t index)
